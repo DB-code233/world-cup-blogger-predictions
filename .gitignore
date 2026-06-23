@@ -1,0 +1,7 @@
+# 本地下载的预测图片（按需决定是否追踪）
+# images/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo

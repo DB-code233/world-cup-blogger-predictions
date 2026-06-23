@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><style>
+.card{background:rgba(255,255,255,0.7);padding:20px;margin:10px;border-radius:12px;cursor:pointer}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1000;justify-content:center;align-items:center}
+.modal-overlay.show{display:flex}
+.modal-sheet{background:white;padding:40px;border-radius:20px;max-width:500px}
+</style></head>
+<body style="background:green;font-family:sans-serif;padding:40px">
+<h1 style="color:white">Click Test</h1>
+<div class="card" onclick="showDetail(1)">Card 1 - Click me</div>
+<div class="card" onclick="showDetail(2)">Card 2 - Click me</div>
+<div class="modal-overlay" id="mod" onclick="if(event.target===this)closeMod()">
+  <div class="modal-sheet" id="ms"></div>
+</div>
+<script>
+var CARDS={1:{a:"Blogger A",mi:{home_team:"Brazil",away_team:"Germany",match_num:"001",kickoff_time:"20:00"}},2:{a:"Blogger B",mi:{home_team:"Argentina",away_team:"France"}}};
+function showDetail(id){
+  var d=CARDS[id];if(!d)return;
+  var h='<h2>'+d.a+'</h2>';
+  if(d.mi)h+='<p>'+d.mi.home_team+' vs '+d.mi.away_team+'</p>';
+  document.getElementById('ms').innerHTML=h;
+  document.getElementById('mod').classList.add('show');
+}
+function closeMod(){document.getElementById('mod').classList.remove('show')}
+</script>
+</body></html>

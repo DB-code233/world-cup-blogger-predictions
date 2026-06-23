@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>FIFA World Cup 2026 - Predictions</title>
+<style>
+:root{
+    --green:#1a6e3e;--green-dark:#0f4a28;--green-light:rgba(26,110,62,0.08);
+    --gold:#b8860b;--gold-light:#d4a843;
+    --text:#1a1a1a;--text2:#555566;--text3:#888899;
+    --glass:rgba(255,255,255,0.68);--glass-hover:rgba(255,255,255,0.82);
+    --glass-border:rgba(255,255,255,0.50);
+    --radius:16px;--r-sm:10px;
+    --shadow:0 8px 32px rgba(0,0,0,0.07);
+    --font:"Segoe UI","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:var(--font);min-height:100vh;color:var(--text);
+    -webkit-font-smoothing:antialiased;
+    background-color:#1a6e3e;
+    background-image:
+        repeating-linear-gradient(0deg,transparent 0px,transparent 38px,rgba(0,0,0,0.06) 38px,rgba(0,0,0,0.06) 76px),
+        radial-gradient(ellipse at 50% 30%,rgba(255,255,255,0.08) 0%,transparent 60%),
+        repeating-linear-gradient(0deg,transparent 0px,transparent 19px,rgba(255,255,255,0.02) 19px,rgba(255,255,255,0.02) 38px);
+    background-attachment:fixed;
+}
+.header{text-align:center;padding:40px 20px 32px;position:relative;z-index:1;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.25)}
+.header h1{font-size:2rem;font-weight:750;letter-spacing:3px;text-transform:uppercase}
+.header .sub{font-size:0.78rem;font-weight:600;letter-spacing:4px;opacity:0.85;margin-top:4px}
+.date-bar{display:flex;justify-content:center;align-items:center;gap:14px;padding:14px 20px;position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.38);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);border-bottom:1px solid rgba(255,255,255,0.25)}
+.date-bar label{font-size:0.82rem;font-weight:650;color:rgba(255,255,255,0.92)}
+.date-bar select{padding:8px 34px 8px 14px;border-radius:22px;border:1px solid rgba(255,255,255,0.45);background:rgba(255,255,255,0.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--text);font-size:0.86rem;font-weight:600;cursor:pointer;outline:none;min-width:170px;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23555' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center}
+.date-bar select:focus{border-color:var(--gold-light)}
+.date-bar .badge{background:rgba(255,255,255,0.28);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff;padding:4px 16px;border-radius:14px;font-size:0.74rem;font-weight:700}
+.container{max-width:1500px;margin:0 auto;padding:16px 20px 60px;position:relative;z-index:1}
+.sec-info{text-align:center;padding:18px 20px 6px;font-size:0.8rem;color:rgba(255,255,255,0.7);font-weight:500}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:18px;padding:16px 0 32px}
+
+/* Glass card */
+.card{background:var(--glass);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);border:1px solid var(--glass-border);border-radius:var(--radius);padding:20px 22px;cursor:pointer;transition:all 0.3s cubic-bezier(0.16,1,0.3,1);box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.7),transparent);opacity:0.6;pointer-events:none}
+.card:hover{background:var(--glass-hover);box-shadow:0 16px 48px rgba(0,0,0,0.12);transform:translateY(-3px);border-color:rgba(212,168,67,0.45)}
+.card:active{transform:scale(0.992)}
+
+.c-top{display:flex;align-items:center;gap:10px}
+.c-av{display:flex;align-items:center;gap:10px;flex:1;min-width:0}
+.c-av img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.8);box-shadow:0 2px 8px rgba(0,0,0,0.08);flex-shrink:0;background:#e8e8e8}
+.avt{width:38px;height:38px;border-radius:50%;background:rgba(26,110,62,0.15);color:var(--green-dark);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;flex-shrink:0}
+.c-name{font-weight:650;font-size:0.9rem;color:var(--text)}
+.c-time{font-size:0.7rem;color:var(--text3);margin-top:1px}
+.c-tags{display:flex;gap:5px;flex-shrink:0}
+.c-tag{font-size:0.64rem;padding:3px 9px;border-radius:8px;font-weight:600;background:rgba(0,0,0,0.05);color:var(--text2)}
+.c-tag-hot{background:rgba(200,120,30,0.12);color:#b06818}
+.c-match{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--green-light);border-radius:var(--r-sm);font-size:0.92rem}
+.c-num{font-size:0.64rem;font-weight:700;color:var(--green-dark);background:rgba(26,110,62,0.1);padding:3px 7px;border-radius:5px;font-family:"Cascadia Code","Fira Code","Consolas",monospace;flex-shrink:0}
+.c-teams{font-weight:650;color:var(--text);flex:1}
+.c-teams i{font-weight:400;color:var(--text3);font-size:0.7rem;font-style:normal;margin:0 3px}
+.c-ko{font-size:0.74rem;color:var(--green-dark);font-weight:650;font-family:"Cascadia Code","Fira Code","Consolas",monospace;flex-shrink:0}
+.c-pred{font-size:0.84rem;line-height:1.55;color:var(--text2)}
+.c-pred .c-line{display:flex;align-items:baseline;gap:8px;padding:2px 0}
+.c-pred .c-line span{font-size:0.65rem;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:0.4px;min-width:38px;flex-shrink:0}
+.c-pred .c-line strong{font-weight:650;color:var(--green-dark)}
+.c-pred .c-sep{font-size:0.66rem;font-weight:700;color:var(--gold);margin-top:4px;margin-bottom:2px}
+.c-pred .c-raw{color:var(--text2);white-space:pre-line;font-size:0.82rem;line-height:1.5}
+.c-img{width:100%;border-radius:var(--r-sm);overflow:hidden;border:1px solid rgba(0,0,0,0.06)}
+.c-img img{width:100%;height:auto;display:block}
+.c-foot{display:flex;justify-content:space-between;font-size:0.68rem;color:var(--text3);margin-top:auto;padding-top:4px}
+
+/* Modal */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:1000;justify-content:center;align-items:center;padding:24px}
+.modal-overlay.show{display:flex}
+.modal-sheet{background:rgba(255,255,255,0.86);backdrop-filter:blur(28px) saturate(160%);-webkit-backdrop-filter:blur(28px) saturate(160%);border:1px solid rgba(255,255,255,0.55);border-radius:20px;max-width:620px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:0 24px 80px rgba(0,0,0,0.18);padding:32px 28px;position:relative;animation:modIn 0.25s cubic-bezier(0.16,1,0.3,1)}
+@keyframes modIn{from{opacity:0;transform:translateY(16px) scale(0.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+.modal-sheet .d-author{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.modal-sheet .d-author img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid rgba(0,0,0,0.08);background:#e8e8e8}
+.modal-sheet .d-name{font-weight:700;font-size:1.05rem}
+.modal-sheet .d-time{font-size:0.75rem;color:var(--text3);margin-top:2px}
+.modal-sheet .d-match{background:var(--green-light);border-radius:12px;padding:14px 18px;margin-bottom:18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:1.05rem;font-weight:650}
+.modal-sheet .d-content{font-size:0.9rem;line-height:1.7;color:var(--text2)}
+.modal-sheet .d-content .d-line{display:flex;align-items:baseline;gap:10px;padding:6px 0;border-bottom:1px solid rgba(0,0,0,0.04)}
+.modal-sheet .d-content .d-label{font-size:0.7rem;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:0.4px;min-width:48px;flex-shrink:0}
+.modal-sheet .d-content .d-value{font-weight:650;color:var(--text)}
+.modal-sheet .d-image{width:100%;border-radius:12px;margin-top:14px;border:1px solid rgba(0,0,0,0.06);cursor:pointer}
+.modal-sheet .d-stats{display:flex;gap:24px;margin-top:18px;font-size:0.78rem;color:var(--text3);padding-top:14px;border-top:1px solid rgba(0,0,0,0.06)}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:2000;justify-content:center;align-items:center;cursor:zoom-out}
+.lightbox.show{display:flex}
+.lightbox img{max-width:94vw;max-height:94vh;border-radius:8px;box-shadow:0 8px 40px rgba(0,0,0,0.4)}
+.empty{display:none;text-align:center;padding:80px 20px;color:rgba(255,255,255,0.55)}
+.empty p{margin-top:8px;font-size:0.9rem}
+@media(max-width:860px){.card-grid{grid-template-columns:1fr}.modal-sheet{padding:20px 18px}}
+@media(max-width:480px){.header h1{font-size:1.3rem}.card{padding:16px 18px}}
+</style>
+</head>
+<body>
+
+<div class="header"><h1>FIFA World Cup 2026</h1><div class="sub">Blogger Predictions</div></div>
+
+<div class="date-bar">
+<label for="ds">Match Date</label>
+<select id="ds" onchange="filter()"><option value="all">All</option></select>
+<span class="badge" id="cnt"></span>
+</div>
+
+<div class="container" id="mc">
+<!-- CARDS GO HERE -->
+</div>
+
+<div class="empty" id="emp"><p>No predictions for this date</p></div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="mod" onclick="if(event.target===this)closeMod()">
+<div class="modal-sheet" id="ms"></div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lb" onclick="closeLb()">
+<img id="lbImg" src="" alt="">
+</div>
+
+<script>
+// ============================================================
+// DATA - Injected by Python
+// ============================================================
+var CARDS = {};
+var DATES = [];
+
+// ============================================================
+// INIT
+// ============================================================
+function renderAll() {
+    var html = '';
+    DATES.forEach(function(ds) {
+        var dayCards = [];
+        ALL_ENTRIES.forEach(function(e) {
+            if (e.d === ds) dayCards.push(e);
+        });
+        if (!dayCards.length) return;
+        html += '<div class="date-section" data-date="' + ds + '">';
+        var authors = {};
+        dayCards.forEach(function(e) { authors[e.au] = 1; });
+        html += '<div class="sec-info">' + Object.keys(authors).length + ' bloggers - ' + dayCards.length + ' picks</div>';
+        html += '<div class="card-grid">';
+        dayCards.forEach(function(e) {
+            CARDS[e.id] = e;
+            html += renderCard(e);
+        });
+        html += '</div></div>';
+    });
+    document.getElementById('mc').innerHTML = html;
+    document.getElementById('cnt').textContent = ALL_ENTRIES.length + ' picks';
+
+    // Populate date dropdown
+    var s = document.getElementById('ds');
+    DATES.forEach(function(d) {
+        var o = document.createElement('option');
+        o.value = d; o.textContent = d;
+        s.appendChild(o);
+    });
+    if (DATES.length > 0) { s.value = DATES[0]; filter(); }
+
+    // Event delegation for card clicks
+    document.getElementById('mc').addEventListener('click', function(e) {
+        var card = e.target.closest('.card');
+        if (!card) return;
+        var id = parseInt(card.getAttribute('data-id'));
+        if (!id) return;
+        showDetail(id);
+    });
+}
+
+function renderCard(e) {
+    var h = '';
+    h += '<div class="card" data-id="' + e.id + '">';
+    // Author
+    h += '<div class="c-top"><div class="c-av">';
+    if (e.av) h += '<img src="' + esc(e.av) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">';
+    else h += '<span class="avt">' + esc((e.au||'?')[0]) + '</span>';
+    h += '<div><div class="c-name">' + esc(e.au) + '</div><div class="c-time">' + esc(e.tm||'') + '</div></div></div>';
+    if (e.tg && e.tg.length) {
+        h += '<div class="c-tags">';
+        e.tg.forEach(function(t) {
+            h += '<span class="c-tag' + (t==='高胜率'?' c-tag-hot':'') + '">' + esc(t) + '</span>';
+        });
+        h += '</div>';
+    }
+    h += '</div>';
+    // Match
+    if (e.mh && e.ma) {
+        h += '<div class="c-match">';
+        if (e.mn) h += '<span class="c-num">' + esc(e.mn) + '</span>';
+        h += '<span class="c-teams">' + esc(e.mh) + ' <i>vs</i> ' + esc(e.ma) + '</span>';
+        if (e.mt) h += '<span class="c-ko">' + esc(e.mt) + '</span>';
+        h += '</div>';
+    }
+    // Preview
+    var hasC = false;
+    if (e.ht && e.pr) {
+        var lines = [];
+        var ms = e.pr.matches || [];
+        ms.slice(0,2).forEach(function(m, idx) {
+            if (ms.length > 1) lines.push('<div class="c-sep">Match ' + (idx+1) + '</div>');
+            if (m.direction) lines.push('<div class="c-line"><span>Pick</span><strong>' + esc(m.direction) + '</strong></div>');
+            if (m.index_rec) lines.push('<div class="c-line"><span>Index</span><strong>' + esc(m.index_rec) + '</strong></div>');
+            if (m.score_rec) lines.push('<div class="c-line"><span>Score</span><strong>' + esc(m.score_rec) + '</strong></div>');
+            if (m.total_goals) lines.push('<div class="c-line"><span>Goals</span><strong>' + esc(m.total_goals) + '</strong></div>');
+        });
+        if (!lines.length && e.pr.raw) {
+            var r = e.pr.raw;
+            lines.push('<div class="c-raw">' + esc(r.length > 120 ? r.substring(0,120) + '...' : r) + '</div>');
+        }
+        if (lines.length) { h += '<div class="c-pred">' + lines.join('') + '</div>'; hasC = true; }
+    }
+    if (e.hi && e.il) {
+        h += '<div class="c-img"><img src="' + esc(e.il) + '" alt="" loading="lazy"></div>';
+        hasC = true;
+    }
+    if (!hasC) h += '<div class="c-pred"><div class="c-raw">Tap to view</div></div>';
+    h += '<div class="c-foot"><span>' + (e.rn||0) + ' reads</span><span>' + (e.bn||0) + ' buys</span></div>';
+    h += '</div>';
+    return h;
+}
+
+// ============================================================
+// FILTER
+// ============================================================
+function filter() {
+    var d = document.getElementById('ds').value;
+    var ss = document.querySelectorAll('.date-section');
+    var t = 0, v = false;
+    ss.forEach(function(s) {
+        if (d === 'all' || s.getAttribute('data-date') === d) {
+            s.style.display = ''; v = true;
+            t += s.querySelectorAll('.card').length;
+        } else {
+            s.style.display = 'none';
+        }
+    });
+    document.getElementById('cnt').textContent = t + ' picks';
+    document.getElementById('emp').style.display = v ? 'none' : 'block';
+    document.getElementById('mc').style.display = v ? '' : 'none';
+}
+
+// ============================================================
+// MODAL
+// ============================================================
+function showDetail(id) {
+    var d = CARDS[id];
+    if (!d) return;
+    var h = '';
+    h += '<div class="d-author">';
+    if (d.av) h += '<img src="' + esc(d.av) + '" alt="" onerror="this.style.display=\'none\'">';
+    else h += '<span class="avt">' + esc((d.au||'?')[0]) + '</span>';
+    h += '<div><div class="d-name">' + esc(d.au) + '</div><div class="d-time">' + esc(d.tm||'') + '</div></div>';
+    if (d.tg && d.tg.length) {
+        h += '<div class="c-tags" style="margin-left:auto">';
+        d.tg.forEach(function(x) { h += '<span class="c-tag' + (x==='高胜率'?' c-tag-hot':'') + '">' + esc(x) + '</span>'; });
+        h += '</div>';
+    }
+    h += '</div>';
+    if (d.mh && d.ma) {
+        h += '<div class="d-match">';
+        if (d.mn) h += '<span class="c-num">#' + esc(d.mn) + '</span>';
+        h += '<span>' + esc(d.mh) + ' <i>vs</i> ' + esc(d.ma) + '</span>';
+        if (d.mt) h += '<span class="c-ko" style="margin-left:auto">' + esc(d.mt) + '</span>';
+        h += '</div>';
+    }
+    if (d.ht && d.pr) {
+        h += '<div class="d-content">';
+        var ms = d.pr.matches || [];
+        if (ms.length) {
+            ms.forEach(function(m, i) {
+                if (i > 0) h += '<div style="margin-top:14px"></div>';
+                if (ms.length > 1) h += '<div style="font-weight:700;color:var(--green-dark);margin-bottom:4px">Match ' + (i+1) + '</div>';
+                if (m.teams) h += '<div class="d-line"><span class="d-label">Match</span><span class="d-value">' + esc(m.teams) + '</span></div>';
+                if (m.direction) h += '<div class="d-line"><span class="d-label">Pick</span><span class="d-value">' + esc(m.direction) + '</span></div>';
+                if (m.index_rec) h += '<div class="d-line"><span class="d-label">Index</span><span class="d-value">' + esc(m.index_rec) + '</span></div>';
+                if (m.score_rec) h += '<div class="d-line"><span class="d-label">Score</span><span class="d-value">' + esc(m.score_rec) + '</span></div>';
+                if (m.total_goals) h += '<div class="d-line"><span class="d-label">Goals</span><span class="d-value">' + esc(m.total_goals) + '</span></div>';
+                if (!m.teams && !m.direction && !m.index_rec && !m.score_rec && !m.total_goals && m.raw) h += '<div style="white-space:pre-line">' + esc(m.raw) + '</div>';
+            });
+        } else if (d.pr.raw) {
+            h += '<div style="white-space:pre-line">' + esc(d.pr.raw) + '</div>';
+        }
+        h += '</div>';
+    }
+    if (d.hi && d.il) {
+        var isrc = esc(d.il);
+        h += '<img class="d-image" src="' + isrc + '" alt="" onclick="openLb(\'' + isrc + '\')">';
+    }
+    h += '<div class="d-stats"><span>Reads: ' + (d.rn||0) + '</span><span>Buys: ' + (d.bn||0) + '</span></div>';
+    document.getElementById('ms').innerHTML = h;
+    document.getElementById('mod').classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+function closeMod() { document.getElementById('mod').classList.remove('show'); document.body.style.overflow = ''; }
+
+// ============================================================
+// LIGHTBOX
+// ============================================================
+function openLb(s) { document.getElementById('lbImg').src = s; document.getElementById('lb').classList.add('show'); document.body.style.overflow = 'hidden'; }
+function closeLb() { document.getElementById('lb').classList.remove('show'); document.body.style.overflow = ''; }
+
+// ============================================================
+// UTILS
+// ============================================================
+function esc(s) {
+    if (!s) return '';
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { closeMod(); closeLb(); } });
+</script>
+
+</body>
+</html>
