@@ -14,17 +14,15 @@ DD, IDIR, OD = BASE/"data", BASE/"images", BASE/"output"
 HTML = OD/"blogger_report.html"
 for d in [DD, IDIR, OD]: d.mkdir(parents=True, exist_ok=True)
 
+_dl_fail=set()
 def dl(url, force=False):
     if not url: return ""
     h = hashlib.md5(url.encode()).hexdigest()[:12]
     ext = ".png" if url.lower().endswith(".png") else ".jpg"
     lp = IDIR/f"{h}{ext}"
     if lp.exists() and not force: return f"../images/{h}{ext}"
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=30) as r: lp.write_bytes(r.read())
-        return f"../images/{h}{ext}"
-    except: return url
+    # use remote URL directly (faster, OSS is browser-accessible)
+    return url
 
 def parse_html(h):
     if not h: return {"raw":"","matches":[]}
@@ -118,7 +116,9 @@ HTML_T = r'''<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
-<title>World Cup 2026 — Predictions</title>
+<meta name="description" content="⚽ 全网知名世界杯博主预测聚合 — 实时追踪杨震、刘建宏、巴萨小李、野燃等顶级足球博主2026世界杯独家预测。胜平负·让球·比分·总进球·半全场，一站式对比。">
+<meta name="keywords" content="世界杯,2026世界杯,世界杯预测,博主预测,竞彩,足球预测,FIFA World Cup,杨震,刘建宏,巴萨小李,野燃">
+<title>⚽ 全网知名世界杯博主预测聚合 | 2026 World Cup Predictions</title>
 <style>
 :root{
     --bg: #f2f4f0;
