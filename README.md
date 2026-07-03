@@ -2,8 +2,8 @@
 
 > 🔥 一站式追踪杨震、刘建宏、巴萨小李、野燃等顶级足球博主的2026世界杯独家预测
 
-[![GitHub Pages](https://img.shields.io/badge/🌐-在线预览-brightgreen)](https://db-code233.github.io/blogger-aggregator/)
-[![2026 World Cup](https://img.shields.io/badge/🏆-2026世界杯-blue)](https://db-code233.github.io/blogger-aggregator/)
+[![GitHub Pages](https://img.shields.io/badge/🌐-在线预览-brightgreen)](https://db-code233.github.io/world-cup-blogger-predictions/)
+[![2026 World Cup](https://img.shields.io/badge/🏆-2026世界杯-blue)](https://db-code233.github.io/world-cup-blogger-predictions/)
 [![Bloggers](https://img.shields.io/badge/👥-27+博主-orange)](#)
 [![Predictions](https://img.shields.io/badge/📊-50+预测/日-red)](#)
 
@@ -32,7 +32,7 @@ cd E:/football/blogger_aggregator
 python generate_report.py data/2026-07-03.json
 
 # 3. 浏览器打开 output/blogger_report.html
-#    或直接访问在线版：https://db-code233.github.io/blogger-aggregator/
+#    或直接访问在线版：https://db-code233.github.io/world-cup-blogger-predictions/
 ```
 
 ## 🏗️ 技术架构
