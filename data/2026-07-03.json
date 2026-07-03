@@ -1,1 +1,581 @@
-{"code":200,"message":"成功","data":{"list":[{"id":29487,"pid":0,"uid":1,"author_id":119,"platform_name":null,"platform_article_id":null,"meal_id":"","temp_id":0,"class":1,"title":"【老刘三场点评 含重点】澳大利亚-埃及 阿根廷-佛得角 哥伦比亚-加纳","ctitle":"","coin":"9.90","virtual_coin_price":399,"img":"https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/90f142c5-5b1a-4a17-a113-f2d9232d1450.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/bc946a47-4db3-4d77-8575-ff2c6dd46e07.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/d56f63fd-51a6-4d1c-9f38-483da3867da5.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/a64213bb-bf84-40df-b3ad-21191984ea1e.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/bc0d5493-02b1-4ef9-a460-e3f735e90322.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/0c6cc5bc-7994-4e9c-8241-93f6d254c1c9.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/f78b2c80-3ef8-4ffc-9978-37c7f0bcb18e.jpeg","free_img":"","content":"","free_content":"","mp3":"","free_mp3":"","disable":0,"shelf":0,"qrcode":"","right":0,"buy_num":0,"read_num":4,"bn_click_num":0,"open_date":0,"close_date":0,"push_date":0,"is_push":0,"collection":0,"create_date":"2026-07-03","publish_time":1783061698,"create_time":1783061698,"update_time":1783061843,"watermark":0,"right_open":0,"top":9999,"sort":6,"is_sold_out":0,"is_del":0,"author":{"nickname":"刘建宏","avatar":"https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-05-20/04aca2c5-05cb-4005-8316-348bf5eeafe0.jpg"},"is_bought":false,"create_time_formatted":"07-03 14:54","tags":{"1":[],"2":[{"id":5,"name":"昨晚3-3大满贯","background_img":"","type":2,"sort":0}],"3":[]}},{"id":29486,"pid":0,"uid":1,"author_id":134,"platform_name":null,"platform_article_id":null,"meal_id":"","temp_id":0,"class":1,"title":"7月3日全时段三场！！！086澳大利亚+087阿根廷+088哥伦比亚","ctitle":"","coin":"9.90","virtual_coin_price":399,"img":"https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/9d67e9b8-5c82-4276-864f-c5c3cd188956.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/b626cc5e-ea2e-452d-8f87-a4257d1068a1.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/ddb01f75-daf6-4b0a-a5ea-b529845c6cb8.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/1bf863f7-8751-479f-a7b1-99917adbe679.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/c4068432-8602-48e0-b94e-14657849592d.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/5f3bf6ee-70aa-4984-bc80-a88d8df46c43.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/345217e4-ffe3-4cce-8bf0-baef34c3119d.jpeg","free_img":"","content":"","free_content":"","mp3":"","free_mp3":"","disable":0,"shelf":0,"qrcode":"","right":0,"buy_num":8,"read_num":13,"bn_click_num":0,"open_date":0,"close_date":0,"push_date":0,"is_push":0,"collection":0,"create_date":"2026-07-03","publish_time":1783061525,"create_time":1783061525,"update_time":1783061847,"watermark":0,"right_open":0,"top":9999,"sort":7,"is_sold_out":0,"is_del":0,"author":{"nickname":"杨震","avatar":"https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-05-22/a827f18c-fdd9-4af7-a50d-3125b05b7d94.jpg"},"is_bought":false,"create_time_formatted":"07-03 14:52","tags":{"1":[{"id":23,"name":"近四天全红","background_img":"","type":1,"sort":0}],"2":[{"id":38,"name":"世界杯3红3","background_img":"","type":2,"sort":0}],"3":[]}}],"count":1750}}
+{
+  "code": 200,
+  "message": "成功",
+  "data": {
+    "list": [
+      {
+        "id": 29487,
+        "pid": 0,
+        "uid": 1,
+        "author_id": 119,
+        "platform_name": null,
+        "platform_article_id": null,
+        "meal_id": "",
+        "temp_id": 0,
+        "class": 1,
+        "title": "【老刘三场点评 含重点】澳大利亚-埃及 阿根廷-佛得角 哥伦比亚-加纳",
+        "ctitle": "",
+        "coin": "9.90",
+        "virtual_coin_price": 399,
+        "img": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/90f142c5-5b1a-4a17-a113-f2d9232d1450.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/bc946a47-4db3-4d77-8575-ff2c6dd46e07.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/d56f63fd-51a6-4d1c-9f38-483da3867da5.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/a64213bb-bf84-40df-b3ad-21191984ea1e.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/bc0d5493-02b1-4ef9-a460-e3f735e90322.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/0c6cc5bc-7994-4e9c-8241-93f6d254c1c9.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/f78b2c80-3ef8-4ffc-9978-37c7f0bcb18e.jpeg",
+        "free_img": "",
+        "content": "",
+        "free_content": "",
+        "mp3": "",
+        "free_mp3": "",
+        "disable": 0,
+        "shelf": 0,
+        "qrcode": "",
+        "right": 0,
+        "buy_num": 0,
+        "read_num": 4,
+        "bn_click_num": 0,
+        "open_date": 0,
+        "close_date": 0,
+        "push_date": 0,
+        "is_push": 0,
+        "collection": 0,
+        "create_date": "2026-07-03",
+        "publish_time": 1783061698,
+        "create_time": 1783061698,
+        "update_time": 1783061843,
+        "watermark": 0,
+        "right_open": 0,
+        "top": 9999,
+        "sort": 6,
+        "is_sold_out": 0,
+        "is_del": 0,
+        "author": {
+          "nickname": "刘建宏",
+          "avatar": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-05-20/04aca2c5-05cb-4005-8316-348bf5eeafe0.jpg"
+        },
+        "is_bought": false,
+        "create_time_formatted": "07-03 14:54",
+        "tags": {
+          "1": [],
+          "2": [
+            {
+              "id": 5,
+              "name": "昨晚3-3大满贯",
+              "background_img": "",
+              "type": 2,
+              "sort": 0
+            }
+          ],
+          "3": []
+        }
+      },
+      {
+        "id": 29486,
+        "pid": 0,
+        "uid": 1,
+        "author_id": 134,
+        "platform_name": null,
+        "platform_article_id": null,
+        "meal_id": "",
+        "temp_id": 0,
+        "class": 1,
+        "title": "7月3日全时段三场！！！086澳大利亚+087阿根廷+088哥伦比亚",
+        "ctitle": "",
+        "coin": "9.90",
+        "virtual_coin_price": 399,
+        "img": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/9d67e9b8-5c82-4276-864f-c5c3cd188956.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/b626cc5e-ea2e-452d-8f87-a4257d1068a1.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/ddb01f75-daf6-4b0a-a5ea-b529845c6cb8.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/1bf863f7-8751-479f-a7b1-99917adbe679.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/c4068432-8602-48e0-b94e-14657849592d.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/5f3bf6ee-70aa-4984-bc80-a88d8df46c43.jpeg,https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-07-03/345217e4-ffe3-4cce-8bf0-baef34c3119d.jpeg",
+        "free_img": "",
+        "content": "",
+        "free_content": "",
+        "mp3": "",
+        "free_mp3": "",
+        "disable": 0,
+        "shelf": 0,
+        "qrcode": "",
+        "right": 0,
+        "buy_num": 8,
+        "read_num": 13,
+        "bn_click_num": 0,
+        "open_date": 0,
+        "close_date": 0,
+        "push_date": 0,
+        "is_push": 0,
+        "collection": 0,
+        "create_date": "2026-07-03",
+        "publish_time": 1783061525,
+        "create_time": 1783061525,
+        "update_time": 1783061847,
+        "watermark": 0,
+        "right_open": 0,
+        "top": 9999,
+        "sort": 7,
+        "is_sold_out": 0,
+        "is_del": 0,
+        "author": {
+          "nickname": "杨震",
+          "avatar": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-05-22/a827f18c-fdd9-4af7-a50d-3125b05b7d94.jpg"
+        },
+        "is_bought": false,
+        "create_time_formatted": "07-03 14:52",
+        "tags": {
+          "1": [
+            {
+              "id": 23,
+              "name": "近四天全红",
+              "background_img": "",
+              "type": 1,
+              "sort": 0
+            }
+          ],
+          "2": [
+            {
+              "id": 38,
+              "name": "世界杯3红3",
+              "background_img": "",
+              "type": 2,
+              "sort": 0
+            }
+          ],
+          "3": []
+        }
+      },
+      {
+        "id": 29497,
+        "pid": 0,
+        "uid": 1,
+        "author_id": 101,
+        "title": "7.03重心胆+世界杯3场拆解！",
+        "coin": "9.90",
+        "virtual_coin_price": 399,
+        "img": "",
+        "content": "<p>待更新</p>",
+        "disable": 0,
+        "shelf": 0,
+        "buy_num": 0,
+        "read_num": 4,
+        "create_date": "2026-07-03",
+        "publish_time": 1783072539,
+        "create_time": 1783072539,
+        "update_time": 1783072596,
+        "watermark": 0,
+        "right_open": 0,
+        "top": 9999,
+        "sort": 100,
+        "is_sold_out": 0,
+        "is_del": 0,
+        "author": {
+          "nickname": "东方天纵",
+          "avatar": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-05-22/aa316749-3075-4a12-96ca-c91f1cf78652.jpg"
+        },
+        "is_bought": false,
+        "create_time_formatted": "07-03 17:55",
+        "tags": {
+          "1": [],
+          "2": [
+            {
+              "id": 49,
+              "name": "世界杯3红2",
+              "background_img": "",
+              "type": 2,
+              "sort": 0
+            }
+          ],
+          "3": []
+        }
+      },
+      {
+        "id": 29496,
+        "pid": 0,
+        "uid": 1,
+        "author_id": 93,
+        "title": "篮球 19:30 世亚预",
+        "coin": "9.90",
+        "virtual_coin_price": 99,
+        "img": "",
+        "content": "<p>19:30 世亚预 中国男篮球大165.5 数据95 中</p><p>竞大</p>",
+        "disable": 0,
+        "shelf": 0,
+        "buy_num": 1,
+        "read_num": 3,
+        "create_date": "2026-07-03",
+        "publish_time": 1783072522,
+        "create_time": 1783072522,
+        "update_time": 1783072569,
+        "watermark": 0,
+        "right_open": 0,
+        "top": 9999,
+        "sort": 100,
+        "is_sold_out": 0,
+        "is_del": 0,
+        "author": {
+          "nickname": "b哥说足球",
+          "avatar": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-05-22/e4145b59-1875-4cd5-bdd2-d33e45bf34f9.jpg"
+        },
+        "is_bought": false,
+        "create_time_formatted": "07-03 17:55",
+        "tags": {
+          "1": [],
+          "2": [
+            {
+              "id": 1,
+              "name": "高胜率",
+              "background_img": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-06-16/81e5bb61-42e9-4edd-9cb2-d7c2c4a4bec7.png",
+              "type": 2,
+              "sort": 0
+            }
+          ],
+          "3": []
+        }
+      },
+      {
+        "id": 29495,
+        "pid": 0,
+        "uid": 1,
+        "author_id": 93,
+        "title": "篮球 18:30 世亚预",
+        "coin": "9.90",
+        "virtual_coin_price": 99,
+        "img": "",
+        "content": "<p>18:30 世亚预 韩国男篮+8.5 数据95 中</p><p>竞让负</p>",
+        "disable": 0,
+        "shelf": 0,
+        "buy_num": 1,
+        "read_num": 1,
+        "create_date": "2026-07-03",
+        "publish_time": 1783072509,
+        "create_time": 1783072509,
+        "update_time": 1783072552,
+        "watermark": 0,
+        "right_open": 0,
+        "top": 9999,
+        "sort": 100,
+        "is_sold_out": 0,
+        "is_del": 0,
+        "author": {
+          "nickname": "b哥说足球",
+          "avatar": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-05-22/e4145b59-1875-4cd5-bdd2-d33e45bf34f9.jpg"
+        },
+        "is_bought": false,
+        "create_time_formatted": "07-03 17:55",
+        "tags": {
+          "1": [],
+          "2": [
+            {
+              "id": 1,
+              "name": "高胜率",
+              "background_img": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-06-16/81e5bb61-42e9-4edd-9cb2-d7c2c4a4bec7.png",
+              "type": 2,
+              "sort": 0
+            }
+          ],
+          "3": []
+        }
+      },
+      {
+        "id": 29494,
+        "pid": 0,
+        "uid": 1,
+        "author_id": 93,
+        "title": "01:00 瑞典超",
+        "coin": "9.90",
+        "virtual_coin_price": 99,
+        "img": "",
+        "content": "<p>01:00 瑞典超 天狼星-1 数据98 中</p><p>竞胜</p>",
+        "disable": 0,
+        "shelf": 0,
+        "buy_num": 0,
+        "read_num": 0,
+        "create_date": "2026-07-03",
+        "publish_time": 1783072495,
+        "create_time": 1783072495,
+        "update_time": 1783072539,
+        "watermark": 0,
+        "right_open": 0,
+        "top": 9999,
+        "sort": 100,
+        "is_sold_out": 0,
+        "is_del": 0,
+        "author": {
+          "nickname": "b哥说足球",
+          "avatar": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-05-22/e4145b59-1875-4cd5-bdd2-d33e45bf34f9.jpg"
+        },
+        "is_bought": false,
+        "create_time_formatted": "07-03 17:54",
+        "tags": {
+          "1": [],
+          "2": [
+            {
+              "id": 1,
+              "name": "高胜率",
+              "background_img": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-06-16/81e5bb61-42e9-4edd-9cb2-d7c2c4a4bec7.png",
+              "type": 2,
+              "sort": 0
+            }
+          ],
+          "3": []
+        }
+      },
+      {
+        "id": 29493,
+        "pid": 0,
+        "uid": 1,
+        "author_id": 93,
+        "title": "23:30 芬甲",
+        "coin": "9.90",
+        "virtual_coin_price": 99,
+        "img": "",
+        "content": "<p>23:30 芬甲 查普斯球大2.75 数据95 中</p><p>竞进球345</p>",
+        "disable": 0,
+        "shelf": 0,
+        "buy_num": 0,
+        "read_num": 0,
+        "create_date": "2026-07-03",
+        "publish_time": 1783072481,
+        "create_time": 1783072481,
+        "update_time": 1783072525,
+        "watermark": 0,
+        "right_open": 0,
+        "top": 9999,
+        "sort": 100,
+        "is_sold_out": 0,
+        "is_del": 0,
+        "author": {
+          "nickname": "b哥说足球",
+          "avatar": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-05-22/e4145b59-1875-4cd5-bdd2-d33e45bf34f9.jpg"
+        },
+        "is_bought": false,
+        "create_time_formatted": "07-03 17:54",
+        "tags": {
+          "1": [],
+          "2": [
+            {
+              "id": 1,
+              "name": "高胜率",
+              "background_img": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-06-16/81e5bb61-42e9-4edd-9cb2-d7c2c4a4bec7.png",
+              "type": 2,
+              "sort": 0
+            }
+          ],
+          "3": []
+        }
+      },
+      {
+        "id": 29492,
+        "pid": 0,
+        "uid": 1,
+        "author_id": 93,
+        "title": "09:30 世界杯 哥伦比亚 加纳",
+        "coin": "9.90",
+        "virtual_coin_price": 99,
+        "img": "",
+        "content": "<p>09:30 世界杯 哥伦比亚-1.25 数据98 中</p><p>竞让胜</p><p><br></p>",
+        "disable": 0,
+        "shelf": 0,
+        "buy_num": 0,
+        "read_num": 8,
+        "create_date": "2026-07-03",
+        "publish_time": 1783069436,
+        "create_time": 1783069436,
+        "update_time": 1783072509,
+        "watermark": 0,
+        "right_open": 0,
+        "top": 9999,
+        "sort": 100,
+        "is_sold_out": 0,
+        "is_del": 0,
+        "author": {
+          "nickname": "b哥说足球",
+          "avatar": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-05-22/e4145b59-1875-4cd5-bdd2-d33e45bf34f9.jpg"
+        },
+        "is_bought": false,
+        "create_time_formatted": "07-03 17:03",
+        "tags": {
+          "1": [],
+          "2": [
+            {
+              "id": 1,
+              "name": "高胜率",
+              "background_img": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-06-16/81e5bb61-42e9-4edd-9cb2-d7c2c4a4bec7.png",
+              "type": 2,
+              "sort": 0
+            }
+          ],
+          "3": []
+        }
+      },
+      {
+        "id": 29491,
+        "pid": 0,
+        "uid": 1,
+        "author_id": 93,
+        "title": "06:00 世界杯 阿根廷 佛得角 ",
+        "coin": "9.90",
+        "virtual_coin_price": 99,
+        "img": "",
+        "content": "<p>06:00 世界杯 阿根廷-2 数据98 中</p><p>竞让胜 平</p>",
+        "disable": 0,
+        "shelf": 0,
+        "buy_num": 0,
+        "read_num": 0,
+        "create_date": "2026-07-03",
+        "publish_time": 1783069407,
+        "create_time": 1783069407,
+        "update_time": 1783072492,
+        "watermark": 0,
+        "right_open": 0,
+        "top": 9999,
+        "sort": 100,
+        "is_sold_out": 0,
+        "is_del": 0,
+        "author": {
+          "nickname": "b哥说足球",
+          "avatar": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-05-22/e4145b59-1875-4cd5-bdd2-d33e45bf34f9.jpg"
+        },
+        "is_bought": false,
+        "create_time_formatted": "07-03 17:03",
+        "tags": {
+          "1": [],
+          "2": [
+            {
+              "id": 1,
+              "name": "高胜率",
+              "background_img": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-06-16/81e5bb61-42e9-4edd-9cb2-d7c2c4a4bec7.png",
+              "type": 2,
+              "sort": 0
+            }
+          ],
+          "3": []
+        }
+      },
+      {
+        "id": 29490,
+        "pid": 0,
+        "uid": 1,
+        "author_id": 43,
+        "title": "潜哥世界杯，澳大利亚VS埃及",
+        "coin": "9.90",
+        "virtual_coin_price": 99,
+        "img": "",
+        "content": "<p>世界杯，澳大利亚～埃及</p><p><br></p><p>埃及头号球星在内多人受伤，埃及队遭遇伤停困扰！</p><p><br></p><p>首个伤情出现在尼斯后卫穆罕默德-阿卜杜勒莫奈姆身上，他上场比赛开场不久便遭遇伤情含泪离场。这名刚从膝盖前十字韧带撕裂导致的长期缺阵中复出的球员，此番是首次登上世界杯赛场，他的缺席对球队影响不小。</p><p><br></p><p>埃及的坏消息还在继续，第57分钟队长穆罕默德-萨拉赫主动向教练组申请换人，随后痛苦地离开卢蒙球场。此后队友艾哈迈德-法图赫也遭遇重伤，同样被迫提前离场。</p><p><br></p><p>此外中场莫哈纳德-拉辛因停赛将缺席比赛而哈姆迪-法西、穆罕默德-阿卜杜勒莫内姆也出战成疑，球队多人遭遇伤病困扰，这对于埃及来说非常糟糕！</p><p><br></p><p>埃及主帅已经确认，萨拉赫铁定不能首发，大概率要替补出场，什么时候出场待定…</p><p><br></p><p>埃及的“空”，不小…</p><p><br></p><p>1.16亿整体身价的埃及与7745万生态澳大利亚相差不大，马尔穆什的6000+萨拉赫的3000万就占去了埃及的接近80％，埃及其他球员的身价其实很低！</p><p><br></p><p>世界排名28～世界排名26，两支球队的广义实力伯仲，澳大利亚与一般的亚洲球队不同，他本身也是脱洋入亚球队，澳大利亚的世界杯DNA也远强于埃及。</p><p><br></p><p>换句话说，广义实力、基础实力、世界排名、整体定位、世界杯辨识度丝毫不落下风的澳大利亚，在忽无优劣的中立场背景下，存在任何可能性、或者说存在巨大的结果可能性…</p><p><br></p><p>数据呢？</p><p><br></p><p>残缺阵容的埃及初盘就让平半，后续一直上盘不断的升水，埃及的市场感现“非常费劲”…</p><p><br></p><p>不奇怪，埃及对阵同档亚洲球队的伊朗也是这种数据表达，结果就是没有赢球的握手言和，那场比赛市场对平局的评估异常火热、并且达到了目的，收获了盈利。这叫数据结果记忆…</p><p><br></p><p>另外，亚足联目前只剩下澳大利亚一根独苗，此前进入淘汰赛的日本队已经被巴西淘汰。而此前小组赛阶段亚洲七支球队出局，六支球队是被非洲球队直接送走。“为了平衡保一支亚洲球队进16强”，这种阴谋论不绝于耳、并且颇受认可。市场对澳大利亚的期待值不低…</p><p><br></p><p>宏微观层面比对以后，怎么看埃及都是在强让、强拉！</p><p><br></p><p>澳大利亚受平半，怎么看都是平了赢一半、赢了全赢的“天作之选”！</p><p><br></p><p>“埃及拿啥赢澳大利亚？”，已经成了市场呼声…</p><p><br></p><p>欧赔的平局非常低，几乎同埃及对阵伊朗的那场比赛平局如出一辙，这又是一个接近于官宣的强烈信号…</p><p><br></p><p>而主胜由于双方的接近伯仲、埃及的伤病严重、埃及对伊朗的差一点输掉比赛，以及澳大利亚不同一般亚洲球队的结果可能性，变得特别具备憧憬宽度！</p><p><br></p><p>至此，胜平双拉完成，亚盘的下盘打造完成！</p><p><br></p><p>我支持，埃及。</p><p><br></p><p>亚丘，埃及-0.25。</p><p>竞彩客胜！</p>",
+        "disable": 0,
+        "shelf": 0,
+        "buy_num": 1,
+        "read_num": 10,
+        "create_date": "2026-07-03",
+        "publish_time": 1783069231,
+        "create_time": 1783069231,
+        "update_time": 1783072481,
+        "watermark": 0,
+        "right_open": 0,
+        "top": 9999,
+        "sort": 100,
+        "is_sold_out": 0,
+        "is_del": 0,
+        "author": {
+          "nickname": "正开体育潜哥",
+          "avatar": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-05-14/d06ea699-86f4-4dc9-aee4-dfa0717c9396.jpg"
+        },
+        "is_bought": false,
+        "create_time_formatted": "07-03 17:00",
+        "tags": {
+          "1": [],
+          "2": [
+            {
+              "id": 1,
+              "name": "高胜率",
+              "background_img": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-06-16/81e5bb61-42e9-4edd-9cb2-d7c2c4a4bec7.png",
+              "type": 2,
+              "sort": 0
+            }
+          ],
+          "3": []
+        }
+      },
+      {
+        "id": 29489,
+        "pid": 0,
+        "uid": 1,
+        "author_id": 43,
+        "title": "潜哥世界杯，哥伦比亚VS加纳",
+        "coin": "9.90",
+        "virtual_coin_price": 99,
+        "img": "",
+        "content": "<p>世界杯，哥伦比亚～加纳</p><p><br></p><p>哥伦比亚阵容完善，可派出全主力出战！</p><p><br></p><p>哥伦比亚队赛前没有报告任何伤病问题，因此预计将派出全部阵容出战,他们的首发阵容不太可能出现意外，将由路易斯·迪亚斯、路易斯·苏亚雷斯和詹姆斯·罗德里格斯将组成锋线三叉戟。</p><p><br></p><p>路易斯·苏亚雷斯此前因伤在上轮对阵葡萄牙的比赛中只是替补出场，但这位里斯本竞技的前锋已经恢复健康,可以首发出战</p><p>\t</p><p>哥伦比亚报纸《哥伦比亚人报》指出，堪萨斯城本身拥有超过52.1万居民，约有2.2万哥伦比亚人居住在堪萨斯城及其周边地区，本场将会有大量哥伦比亚球迷到场支持球队。并且，球队在佛罗里达州训练期间，由于迈阿密居住着大量的哥伦比亚人，该市为国家队提供了非常有利的环境，他们在球队逗留期间给予了大力支持，这些情况对于哥伦比亚都是一大利好。</p><p><br></p><p>另外，\t哥伦比亚面对非洲球队成绩非常出色，这将是哥伦比亚国家队在世界杯历史上第六次与非洲球队交锋。目前为止，哥伦比亚队在面对这类对手时战绩占优，取得四胜一负的佳绩。</p><p><br></p><p>1990年意大利世界杯，在16强赛中，哥伦比亚以1-2落败于喀麦隆，1998年法国世界杯小组赛阶段，他们以1-0战胜突尼斯；在2014年巴西世界杯上，哥伦比亚以2-1战胜科特迪瓦；四年后，在2018年俄罗斯世界杯小组赛中，哥伦比亚1-0战胜塞内加尔，确保小组第一，晋级16强；最近一次出现这种情况是在本届世界杯上。在2026年世界杯小组赛阶段，哥伦比亚凭借丹尼尔·穆尼奥斯的进球以1-0战胜刚果民主共和国。</p><p><br></p><p>哥伦比亚阵容完善程度、交锋历史战绩、赛事之间的休息调整等重要细节都有优势，今天又有等同于半个主场地利优势！</p><p><br></p><p>哥伦比亚小组赛的表现堪称完美，首战三比一完胜乌兹别克斯坦让这支南美劲旅迅速进入状态，第二轮一比零兵不血刃的巧取刚果金，第三轮零封战平葡萄牙，最后以小组第一力压群星闪耀的葡萄牙昂首挺进淘汰赛。</p><p><br></p><p>哥伦比亚小组赛的比赛内容相当卓越，三场比赛几乎场场压着对手，3：1战胜乌兹别克斯坦是维度的差距；1：0击败刚果金全场射门达到了20次、射正高达9次，将比赛变成了半场攻防演练；第三场与葡萄牙战平，数据是24次射门、6次射正、控球率55%，全场压制葡萄牙！</p><p><br></p><p>哥伦比亚的状态非常好，战斗力相当扎眼！</p><p><br></p><p>加纳小组赛的表现虽然还行，但仅限一般。唯一的一场胜利是战胜巴拿马 ，那场比赛加纳全场被动，90+4绝杀其实是偷袭得手，实力体现不足；逼平英格兰虽然很耀眼，但其实是没有进球、而且英格兰的数据形象从来就那么垃圾；第三轮对阵强队克罗地亚输球，就显得原形毕露。</p><p><br></p><p>事实上，加纳在世界杯正赛之前的7场友谊赛表现相当糟糕，6连败、七场不胜，2025年11月18号到今天的9场国际A级赛事也仅仅赢下了巴拿。</p><p><br></p><p>加纳的持续状态不好，致胜能力低下！</p><p><br></p><p>世界排名11～世界排名第65，这不是一个段位的球队。</p><p><br></p><p>南美豪门～非洲准强，综合定位差距不小。</p><p><br></p><p>全方位比对，哥伦比亚什么都不缺，自然是市场眼中的绝对大概率方…</p><p><br></p><p>初盘28步，半球、半一、一球，态度分歧非常严重，甚至极个别小机构给到了匪夷所思的平半让步…</p><p><br></p><p>当天的晚上，数据随高不随低高配到了一球，7月3号也就是今天升1.25，持续至今，如何解读呢？</p><p><br></p><p>世界杯淘汰赛的初盘与联赛不同、也与世界杯未开始前的初盘也不同。6月28号毫无疑问是存在投注量的，那么初盘的如此步伐不统一，比如0.25、0.5、0.75这样没有阻力的设置还能拦下几颗筹码？</p><p><br></p><p>最令人毛骨悚然的是0.25，加纳“输半搏全”吗？…</p><p><br></p><p>初盘的分歧不同事实上就是评估不同、本场比赛的定位不同、对盘口推出以后天平倾斜度有巨大顾虑、或者说忌惮不平衡自身造成伤害。</p><p><br></p><p>至于后续的跳盘，不过就是小机构跟随权重大哥、示强豪强、突出信心、彰显优势和胜势、利用追涨杀跌、借哥伦比亚的数据可能性和结果可能性，而已！</p><p><br></p><p>我认为精算的真实评估是初盘，而初盘的数据力度已经流露了机构哥伦比亚的真心不看好…</p><p><br></p><p>亚盘，加纳+1.25。</p><p>竞彩让平加让负。</p><p><br></p><p>搏，让负。</p>",
+        "disable": 0,
+        "shelf": 0,
+        "buy_num": 1,
+        "read_num": 1,
+        "create_date": "2026-07-03",
+        "publish_time": 1783069194,
+        "create_time": 1783069194,
+        "update_time": 1783072465,
+        "watermark": 0,
+        "right_open": 0,
+        "top": 9999,
+        "sort": 100,
+        "is_sold_out": 0,
+        "is_del": 0,
+        "author": {
+          "nickname": "正开体育潜哥",
+          "avatar": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-05-14/d06ea699-86f4-4dc9-aee4-dfa0717c9396.jpg"
+        },
+        "is_bought": false,
+        "create_time_formatted": "07-03 16:59",
+        "tags": {
+          "1": [],
+          "2": [
+            {
+              "id": 1,
+              "name": "高胜率",
+              "background_img": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-06-16/81e5bb61-42e9-4edd-9cb2-d7c2c4a4bec7.png",
+              "type": 2,
+              "sort": 0
+            }
+          ],
+          "3": []
+        }
+      },
+      {
+        "id": 29488,
+        "pid": 0,
+        "uid": 1,
+        "author_id": 30,
+        "title": "⚽【野燃】今日合集🈴🈴🈴",
+        "coin": "9.90",
+        "virtual_coin_price": 199,
+        "img": "",
+        "content": "<p><br></p><p style=\"text-align: justify;\">阿根廷 佛得角：<br><br>竞彩 主让胜让平 单关 主让胜<br>阿根廷-2<br>4-0 5-0 5-1<br><br>阿根廷小组赛前两轮提前出线，第三场进行了比较大的轮换，在世界杯淘汰赛的四个大的分区当中，阿根廷这个分区是相对难度比较小一点的，因此我认为对于阿根廷来讲，他的目标也应该是希望能够用尽量小的损失和比较平稳的方式进入到四强，并且对阵是他相同半区的种子球队。<br>佛得角在小组赛三场都是战平，我觉得战平西班牙的比赛是出于西班牙的态度问题，而后两场对阵乌拉圭和沙特是由于他的对手能力有问题，那我觉得本场阿根廷的这种传控跟西班牙并不太一样，西班牙的传控相对来说那场比赛的用人方面缺乏一对一的突破，本场阿根廷的打法则更加快速直接。<br>我认为本场淘汰赛阿根廷就不会让比赛的悬念留的更多，同时还是需要激发其他球员的射门能力，佛得角的爆冷神话到此应该告一段落了，正路。<br><br>哥伦比亚 加纳：<br><br>竞彩 单关 主胜 激进 主让胜<br>哥伦比亚-1或-1.25<br>2-0 1-0 3-1<br><br>哥伦比亚在小组赛三场比赛都非常稳定，在跟葡萄牙的比赛球队也进行了适当的轮换，主力的边后卫穆尼奥斯得到了休息。而加纳小组赛整体来看表现也比较稳定，特别是战平英格兰以及小负克罗地亚，但我认为加纳整体的实力，特别是阵容平均性上来讲还是有些欠缺的。<br>哥伦比亚的这套战术打法讲究后腰和前腰位置的控球有章法，并且利用两个边路进行边路突击和肋部斜传，这个打法非洲球队的防守很难避免犯错，另外哥伦比亚的进攻后手也很出色。<br>我认为两个球队来到目前的位置是实力上有比较大的差距，支持整体更好的哥伦比亚。<br><br>澳大利亚 埃及：<br>竞彩 主让胜 单关 胜<br>澳大利亚+0.25<br>天气 1-1 2-0 2-1</p><p style=\"text-align: justify;\"><br><br></p>",
+        "disable": 0,
+        "shelf": 0,
+        "buy_num": 13,
+        "read_num": 42,
+        "create_date": "2026-07-03",
+        "publish_time": 1783064653,
+        "create_time": 1783064653,
+        "update_time": 1783072465,
+        "watermark": 0,
+        "right_open": 0,
+        "top": 9999,
+        "sort": 100,
+        "is_sold_out": 0,
+        "is_del": 0,
+        "author": {
+          "nickname": "野燃",
+          "avatar": "https://youyouliaoma.oss-cn-guangzhou.aliyuncs.com/pinhaoliao/2026-05-14/36dcb20e-619f-4bbb-93b3-972d6df6a8e2.jpg"
+        },
+        "is_bought": false,
+        "create_time_formatted": "07-03 15:44",
+        "tags": {
+          "1": [],
+          "2": [
+            {
+              "id": 49,
+              "name": "世界杯3红2",
+              "background_img": "",
+              "type": 2,
+              "sort": 0
+            }
+          ],
+          "3": []
+        }
+      }
+    ],
+    "count": 12
+  }
+}
