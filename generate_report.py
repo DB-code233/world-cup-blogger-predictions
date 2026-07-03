@@ -76,7 +76,7 @@ def proc(entry):
                 if isinstance(t,dict) and t.get("name"): r["tg"].append(t["name"])
     mi = ext_title(entry.get("title",""))
     r["mh"]=mi["home_team"]; r["ma"]=mi["away_team"]; r["mn"]=mi["match_num"]; r["mt"]=mi["kickoff_time"]
-    if iu := entry.get("img",""): r["il"]=dl(iu); r["hi"]=True
+    if iu := entry.get("img",""): uls=[dl(u.strip()) for u in iu.split(",") if u.strip()]; r["il"]=uls; r["hi"]=bool(uls)
     if ch := entry.get("content",""): r["pr"]=parse_html(ch); r["ht"]=True
     return r
 
@@ -105,7 +105,7 @@ def merge_json(jp):
             print(f"  merged {len(new)} into {ds}.json")
         else: print(f"  {ds}.json up to date")
     else:
-        dest.write_text(Path(jp).read_text(encoding="utf-8"))
+        dest.write_text(Path(jp).read_text(encoding="utf-8"), encoding="utf-8")
         print(f"  saved {ds}.json ({len(its)} entries)")
     return ds
 
@@ -117,6 +117,7 @@ HTML_T = r'''<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
 <title>World Cup 2026 — Predictions</title>
 <style>
 :root{
@@ -185,7 +186,10 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 .c-pred .c-line .val{font-weight:650;color:var(--green)}
 .c-pred .c-sep{font-size:0.64rem;font-weight:700;color:var(--gold);margin-top:3px;padding-bottom:1px;border-bottom:1px solid var(--border);margin-bottom:2px}
 .c-pred .c-raw{color:var(--text-2);white-space:pre-line;font-size:0.8rem;line-height:1.45}
-.c-img{width:100%;border-radius:4px;overflow:hidden;border:1px solid var(--border)}
+.c-imgs{display:flex;flex-wrap:wrap;gap:4px}
+.c-imgs .c-img{flex:1 1 120px;min-width:100px;max-width:100%}
+.c-imgs .c-img:first-child:last-child{max-width:100%;flex-basis:100%}
+.c-img{border-radius:4px;overflow:hidden;border:1px solid var(--border)}
 .c-img img{width:100%;height:auto;display:block;max-height:300px;object-fit:cover}
 .c-foot{display:flex;justify-content:space-between;font-size:0.64rem;color:var(--text-3);padding-top:2px}
 
@@ -204,7 +208,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 .modal-sheet .d-content .d-line:not(:last-child){border-bottom:1px solid #f0f2ee}
 .modal-sheet .d-content .d-label{font-size:0.64rem;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:0.3px;min-width:42px;flex-shrink:0}
 .modal-sheet .d-content .d-value{font-weight:650;color:var(--text)}
-.modal-sheet .d-image{width:100%;border-radius:6px;margin-top:10px;border:1px solid var(--border);cursor:pointer}
+.modal-sheet .d-image{width:100%;border-radius:6px;margin-top:6px;border:1px solid var(--border);cursor:pointer}
 .modal-sheet .d-stats{display:flex;gap:20px;margin-top:14px;font-size:0.72rem;color:var(--text-3);padding-top:10px;border-top:1px solid var(--border)}
 
 .lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.96);z-index:200;justify-content:center;align-items:center;cursor:zoom-out}
@@ -241,11 +245,11 @@ if(e.mh&&e.ma){h+='<div class="c-match">';if(e.mn)h+='<span class="c-num">#'+esc
 // FULL predictions — all shown on card
 var hasC=false;
 if(e.ht&&e.pr){var lines=[];var ms=e.pr.matches||[];ms.forEach(function(m,idx){if(ms.length>1)lines.push('<div class="c-sep">Match '+(idx+1)+'</div>');if(m.direction)lines.push('<div class="c-line"><span class="lbl">Pick</span><span class="val">'+esc(m.direction)+'</span></div>');if(m.index_rec)lines.push('<div class="c-line"><span class="lbl">Index</span><span class="val">'+esc(m.index_rec)+'</span></div>');if(m.score_rec)lines.push('<div class="c-line"><span class="lbl">Score</span><span class="val">'+esc(m.score_rec)+'</span></div>');if(m.total_goals)lines.push('<div class="c-line"><span class="lbl">Goals</span><span class="val">'+esc(m.total_goals)+'</span></div>');if(!m.direction&&!m.index_rec&&!m.score_rec&&!m.total_goals&&m.raw)lines.push('<div class="c-raw">'+esc(m.raw)+'</div>')});if(lines.length){h+='<div class="c-pred">'+lines.join('')+'</div>';hasC=true}}
-if(e.hi&&e.il){h+='<div class="c-img"><img src="'+esc(e.il)+'" alt="" loading="lazy" onclick="event.stopPropagation();openLb(\''+esc(e.il)+'\')"></div>';hasC=true}
+if(e.hi&&e.il&&e.il.length){h+='<div class="c-imgs">';e.il.forEach(function(u,i){h+='<div class="c-img"><img src="'+esc(u)+'" alt="" loading="lazy" onclick="event.stopPropagation();openLb(\''+esc(u)+'\')"></div>'});h+='</div>';hasC=true}
 if(!hasC)h+='<div class="c-pred"><div class="c-raw">Tap for details</div></div>';
 h+='<div class="c-foot"><span>'+e.rn+' reads</span><span>'+e.bn+' buys</span></div></div>';return h}
 function filter(){var d=document.getElementById('ds').value;var ss=document.querySelectorAll('.date-section'),t=0,v=false;ss.forEach(function(s){if(d==='all'||s.getAttribute('data-date')===d){s.style.display='';v=true;t+=s.querySelectorAll('.card').length}else s.style.display='none'});document.getElementById('cnt').textContent=t+' picks';document.getElementById('emp').style.display=v?'none':'block';document.getElementById('mc').style.display=v?'':''}
-function showDetail(id){var d=ENTRIES.find(function(e){return e.id===id});if(!d)return;var h='';h+='<div class="d-author">';if(d.av)h+='<img src="'+esc(d.av)+'" alt="" onerror="this.style.display=\'none\'">';else h+='<span class="avt">'+esc((d.au||'?')[0])+'</span>';h+='<div><div class="d-name">'+esc(d.au)+'</div><div class="d-time">'+esc(d.tm||'')+'</div></div>';if(d.tg&&d.tg.length){h+='<div class="c-tags" style="margin-left:auto">';d.tg.forEach(function(x){h+='<span class="c-tag'+(x==='高胜率'?' c-tag-hot':'')+'">'+esc(x)+'</span>'});h+='</div>'}h+='</div>';if(d.mh&&d.ma){h+='<div class="d-match">';if(d.mn)h+='<span class="c-num">#'+esc(d.mn)+'</span>';h+='<span>'+esc(d.mh)+' <i>vs</i> '+esc(d.ma)+'</span>';if(d.mt)h+='<span class="c-ko" style="margin-left:auto">'+esc(d.mt)+'</span>';h+='</div>'}if(d.ht&&d.pr){h+='<div class="d-content">';var ms=d.pr.matches||[];if(ms.length){ms.forEach(function(m,i){if(i>0)h+='<div style="margin-top:12px"></div>';if(ms.length>1)h+='<div style="font-weight:650;color:var(--green);margin-bottom:3px">Match '+(i+1)+'</div>';if(m.teams)h+='<div class="d-line"><span class="d-label">Match</span><span class="d-value">'+esc(m.teams)+'</span></div>';if(m.direction)h+='<div class="d-line"><span class="d-label">Pick</span><span class="d-value">'+esc(m.direction)+'</span></div>';if(m.index_rec)h+='<div class="d-line"><span class="d-label">Index</span><span class="d-value">'+esc(m.index_rec)+'</span></div>';if(m.score_rec)h+='<div class="d-line"><span class="d-label">Score</span><span class="d-value">'+esc(m.score_rec)+'</span></div>';if(m.total_goals)h+='<div class="d-line"><span class="d-label">Goals</span><span class="d-value">'+esc(m.total_goals)+'</span></div>';if(!m.teams&&!m.direction&&!m.index_rec&&!m.score_rec&&!m.total_goals&&m.raw)h+='<div style="white-space:pre-line">'+esc(m.raw)+'</div>'})}else if(d.pr.raw){h+='<div style="white-space:pre-line">'+esc(d.pr.raw)+'</div>'}h+='</div>'}if(d.hi&&d.il){var isrc=esc(d.il);h+='<img class="d-image" src="'+isrc+'" alt="" onclick="openLb(\''+isrc+'\')">'}h+='<div class="d-stats"><span>Reads: '+(d.rn||0)+'</span><span>Buys: '+(d.bn||0)+'</span></div>';document.getElementById('ms').innerHTML=h;document.getElementById('mod').classList.add('show');document.body.style.overflow='hidden'}
+function showDetail(id){var d=ENTRIES.find(function(e){return e.id===id});if(!d)return;var h='';h+='<div class="d-author">';if(d.av)h+='<img src="'+esc(d.av)+'" alt="" onerror="this.style.display=\'none\'">';else h+='<span class="avt">'+esc((d.au||'?')[0])+'</span>';h+='<div><div class="d-name">'+esc(d.au)+'</div><div class="d-time">'+esc(d.tm||'')+'</div></div>';if(d.tg&&d.tg.length){h+='<div class="c-tags" style="margin-left:auto">';d.tg.forEach(function(x){h+='<span class="c-tag'+(x==='高胜率'?' c-tag-hot':'')+'">'+esc(x)+'</span>'});h+='</div>'}h+='</div>';if(d.mh&&d.ma){h+='<div class="d-match">';if(d.mn)h+='<span class="c-num">#'+esc(d.mn)+'</span>';h+='<span>'+esc(d.mh)+' <i>vs</i> '+esc(d.ma)+'</span>';if(d.mt)h+='<span class="c-ko" style="margin-left:auto">'+esc(d.mt)+'</span>';h+='</div>'}if(d.ht&&d.pr){h+='<div class="d-content">';var ms=d.pr.matches||[];if(ms.length){ms.forEach(function(m,i){if(i>0)h+='<div style="margin-top:12px"></div>';if(ms.length>1)h+='<div style="font-weight:650;color:var(--green);margin-bottom:3px">Match '+(i+1)+'</div>';if(m.teams)h+='<div class="d-line"><span class="d-label">Match</span><span class="d-value">'+esc(m.teams)+'</span></div>';if(m.direction)h+='<div class="d-line"><span class="d-label">Pick</span><span class="d-value">'+esc(m.direction)+'</span></div>';if(m.index_rec)h+='<div class="d-line"><span class="d-label">Index</span><span class="d-value">'+esc(m.index_rec)+'</span></div>';if(m.score_rec)h+='<div class="d-line"><span class="d-label">Score</span><span class="d-value">'+esc(m.score_rec)+'</span></div>';if(m.total_goals)h+='<div class="d-line"><span class="d-label">Goals</span><span class="d-value">'+esc(m.total_goals)+'</span></div>';if(!m.teams&&!m.direction&&!m.index_rec&&!m.score_rec&&!m.total_goals&&m.raw)h+='<div style="white-space:pre-line">'+esc(m.raw)+'</div>'})}else if(d.pr.raw){h+='<div style="white-space:pre-line">'+esc(d.pr.raw)+'</div>'}h+='</div>'}if(d.hi&&d.il&&d.il.length){d.il.forEach(function(u){h+='<img class="d-image" src="'+esc(u)+'" alt="" onclick="openLb(\''+esc(u)+'\')">'})}h+='<div class="d-stats"><span>Reads: '+(d.rn||0)+'</span><span>Buys: '+(d.bn||0)+'</span></div>';document.getElementById('ms').innerHTML=h;document.getElementById('mod').classList.add('show');document.body.style.overflow='hidden'}
 function closeMod(){document.getElementById('mod').classList.remove('show');document.body.style.overflow=''}
 function openLb(s){document.getElementById('lbImg').src=s;document.getElementById('lb').classList.add('show');document.body.style.overflow='hidden'}
 function closeLb(){document.getElementById('lb').classList.remove('show');document.body.style.overflow=''}
