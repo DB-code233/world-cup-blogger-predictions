@@ -4,22 +4,22 @@
 
 [![GitHub Pages](https://img.shields.io/badge/🌐-在线预览-brightgreen)](https://db-code233.github.io/world-cup-blogger-predictions/)
 [![2026 World Cup](https://img.shields.io/badge/🏆-2026世界杯-blue)](https://db-code233.github.io/world-cup-blogger-predictions/)
-[![Bloggers](https://img.shields.io/badge/👥-27+博主-orange)](#)
+[![Bloggers](https://img.shields.io/badge/👥-42+博主-orange)](#)
 [![Predictions](https://img.shields.io/badge/📊-50+预测/日-red)](#)
 
 ## 🌟 这是什么？
 
 全网最全的**世界杯博主预测聚合站**——每天自动抓取竞彩平台顶级博主的付费预测内容，一张页面浏览所有大V的独家观点。不用一个个关注，不用付费解锁，一站式对比。
 
-**覆盖博主**：杨震、刘建宏、巴萨小李、野燃、文叔盘球、解说员塔卡、正开体育潜哥、全红私房菜、皮特310、老戴懂个球、七哥战术板……等27+知名分析师
+**覆盖博主**：杨震、刘建宏、野燃、十串神、人工智能、带带聊球、明哥足球江湖、雷子足球课、联赛老鬼、解说一芸、Liyao777……等42+知名分析师
 
 ## 📊 核心数据
 
 | 指标 | 数据 |
 |------|------|
-| 📅 覆盖日期 | 2026-06-22 至今 |
-| 👥 收录博主 | 27+ |
-| 📝 日均预测 | 50+ 条 |
+| 📅 覆盖日期 | 2026-06-22 ~ 07-05 |
+| 👥 收录博主 | 42+ |
+| 📝 日均预测 | 25-30 条 |
 | 🏟️ 覆盖比赛 | 世界杯小组赛+淘汰赛 |
 | 🎯 预测维度 | 胜平负 / 让球 / 比分 / 总进球 / 半全场 |
 
